@@ -1,0 +1,29 @@
+name: Test formula
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test (${{ matrix.runner }})
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        runner:
+          - macos-latest
+          - macos-15-intel
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install formula
+        run: brew install --formula ./Formula/chaos-engineering-rs.rb
+      - name: Verify binary
+        run: chaos --version
+      - name: Test formula
+        run: brew test chaos-engineering-rs
