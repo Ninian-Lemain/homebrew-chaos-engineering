@@ -21,9 +21,11 @@ jobs:
           - macos-15-intel
     steps:
       - uses: actions/checkout@v7
+      - name: Register tap
+        run: brew tap Ninian-Lemain/chaos-engineering "$GITHUB_WORKSPACE"
       - name: Install formula
-        run: brew install --formula ./Formula/chaos-engineering-rs.rb
+        run: brew install Ninian-Lemain/chaos-engineering/chaos-engineering-rs
       - name: Verify binary
         run: chaos --version
       - name: Test formula
-        run: brew test chaos-engineering-rs
+        run: brew test Ninian-Lemain/chaos-engineering/chaos-engineering-rs
