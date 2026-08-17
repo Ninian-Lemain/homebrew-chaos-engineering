@@ -1,23 +1,23 @@
 class ChaosEngineeringRs < Formula
   desc "Cross-platform chaos engineering CLI with recovery and SLO gates"
   homepage "https://github.com/Ninian-Lemain/chaos-engineering-rs"
-  version "0.4.0"
+  version "0.4.1"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/Ninian-Lemain/chaos-engineering-rs/releases/download/v0.4.0/chaos-v0.4.0-aarch64-apple-darwin.tar.gz"
-      sha256 "a84f13d455fea13b1d9eba3d786d255af054835f059c0de1d3e6f6cd2e263aeb"
+      url "https://github.com/Ninian-Lemain/chaos-engineering-rs/releases/download/v0.4.1/chaos-v0.4.1-aarch64-apple-darwin.tar.gz"
+      sha256 "0d35c4858800d24910b0019ae107c9b690c26a10468e3788a063047a87c3084c"
     end
     on_intel do
-      url "https://github.com/Ninian-Lemain/chaos-engineering-rs/releases/download/v0.4.0/chaos-v0.4.0-x86_64-apple-darwin.tar.gz"
-      sha256 "83f0aa07cb6952541aebe18665a7724d41b520a271db72d52a4dcbad794f3ff5"
+      url "https://github.com/Ninian-Lemain/chaos-engineering-rs/releases/download/v0.4.1/chaos-v0.4.1-x86_64-apple-darwin.tar.gz"
+      sha256 "1a2e84e4b7096012b7aebc82c5aca33ef1f00df4d4a3acaf74656403a6351f1e"
     end
   end
 
   on_linux do
-    url "https://github.com/Ninian-Lemain/chaos-engineering-rs/releases/download/v0.4.0/chaos-v0.4.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "2f7967a6347bf920476795dcef382209acc08f89c07a62d836106f2a5e9cc9f4"
+    url "https://github.com/Ninian-Lemain/chaos-engineering-rs/releases/download/v0.4.1/chaos-v0.4.1-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "cb397d773684d34a3a0849ea2efbc6382a9eebfc3b5627b2c4da783373c17329"
   end
 
   def install
